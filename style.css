@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* Text styles */
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    perspective: 4px;
+    /* this creates depth */
+    overflow-x: hidden;
+    /* hidden to hide horizontal scrolling */
+    overflow-y: scroll;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  /* background-color: rgb(0,0,0); Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* hides the text when dropdown not clicked */
+  overflow: hidden; /* removes scrollbar from dropdown */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 15%; /* % from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* top margin to avoid conflict with the close button on smaller screens */
+}
+
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: -17px;
+    right: 38px;
+    font-size: 65px;
+    /* font-weight: 1000; */
+    z-index: 101;
+}
+
+/* When the height of the screen is less than 600 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 600px) {
+  .overlay a {font-size: 20px}
+}
+
+@media screen and (max-width: 450px) {
+  .overlay a {font-size: 20px}
+}
+
+@media screen and (min-width: 980px) {
+  .overlay a {
+      font-size: 40px;
+      display: inline-block;
+      margin: 50px;
+  }
+.overlay .closebtn {
+    position: absolute;
+    top: -67px;
+    right: -12px;
+    font-size: 65px;
+    z-index: 101;
+}
+}
+
+header {
+    width: 100%; 
+    min-height: 100vh; 
+    /* 100vh sets the header height to 100% of the screen size, no matter the size of the screen */
+    position: relative;
+    transform-style: preserve-3d;
+}   
+
+/* header pseudo element */
+header::before {
+    content: '';
+    position: absolute;
+    /* position: absolute; forces the element to stay put */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-image: url('media/computerdesk.jpg');
+    background-size: cover;
+    z-index: 0;
+    /* higher z-index numbers = greater importance */
+    transform: translateZ(-3.94px) scale(2);
+}
+
+header div {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    /* moves the header container from top by set value */
+    padding: 0 30px;
+    /* adds padding to left and right (moves away from edge of screen) */
+    color: rgb(255, 255, 255);
+    transform: translateZ(-2px) scale(1.5);
+}
+
+header h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Text section */
+section {
+    width: 100%;
+    background: white;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    margin: auto;
+    /* margin: auto; centers text horizontally */
+    max-width: 700px;
+    /* limits container width for large screens */
+    padding: 80px 40px;
+    color: #212121;
+}
+
+.container h3 {
+    font-family: 'Roboto Condnesed', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.container p {
+    padding-top: 20px;
+    line-height: 1.8;
+}
+
+.container.project {
+    padding-top: 0;
+}
+
+.container.wrapUp {
+    padding-top: 0px;
+}
+
+#hiddenLink {
+    cursor: help;
+}
+
+.hidden_image {
+    margin: auto;
+    margin: 20px 0px;
+    max-width: 100%;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+video {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 30px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer {
+    margin: 20px;
+    text-decoration: none;
+}
+
+.button {
+  background-color: white;
+  border: 3px solid steelblue;
+  color: black;
+  transition: background-color 1s ease-in, color .5s ease-in;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.button:hover {
+    background-color: steelblue;
+    color: whitesmoke;
+    transition-duration: 500ms;
+}
