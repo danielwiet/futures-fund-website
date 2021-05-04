@@ -19,9 +19,9 @@
         <div id="myNav" class="overlay" style="height: 0%;">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="about me.html">About</a>
-                <a href="projects.html">Projects</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
                 <a href="contact page.html">Contact</a>
             </div>
         </div>
@@ -40,49 +40,20 @@
 
     <section>
         <div class='container'>
-            <h3 id='about'>About Me</h3>
+            <h3 id='about'>Greetings!</h3>
 
-            <p>Welcome to my wonderful website. If you are new here, please take a look around. You might just <a id="hiddenLink">find</a> something interesting about me.
+            <p>Welcome to my website. If you are new here, please take a look around. You might just <a id="hiddenLink">find</a> something interesting about me.
             </p>
 
             <p id="easterEgg"></p>
 
-            <p>I work in coastal environmental restoriation at Pontchatrain Conservancy. There, I am the Coastal Data
-            Sharing Program Developer and Technology Coordinator. Part of my job requires handling data requests as
-            they come in and packaging different data sets (either the raw salinity data or interpolated salinity
-            contours) for the end user. Folks who use the data are primarily other non profits, government agencies,
-            and academic institutions. Sometimes we get requests from commercial and recreational fisher-folk who
-            are trying to get a sense of the salinity and where the fish might be biting.</p>
+            <p>This website was created as a capstone project for Coding Bootcamp (Coding for the Web) Level 1 provided by The Futures Fund. If you haven't checked them out, I highly encourage you to do so. They can be found <a href="https://www.thewallsproject.org/futuresfund" style="cursor: pointer; text-decoration: non;">here</a></p>
 
-            <p>Another aspect of my job is to assist different departments with their technology needs. This might mean
-            updating a webpage (using wordpress, and maybe soon actual HTML/CSS and javascript in the near
-            future!)vor the gift shop, creating maps for tree identification, or operating a drone for restoration
-            monitoring.</p>
+            <p>I enrolled in Coding Bootcamp (Coding for the Web) to gain experience in web building. I have a little experience in Python and thought that it would be good to round it out with HTML and CSS. At times, it hasn't been easy, but most rewarding things in life come with a little challenge.</p>
 
-            <p>Recently, I've been helping the education department with a marine debris project, specifically the data
-            collection, interpretation, and visualization. You can learn more about this project <a href="#" style="cursor: pointer; text-decoration: none;">here</a></p>
-        </div>
+            <div><img  class="image" src="media/tree flowers.jpg" alt="round flowers on trees"></div>
 
-        <div class='container project'>
-            <h3 id="projects">Projects</h3>
-
-            <p>Before learing HTML/CSS and Javascript, I had been teaching myself Python. It is a useful language for
-            data analysis and for writing scripts to automate tedious tasks. Recently, I wrote a script that bulk
-            imports salinty shapefiles into ArcGis Pro and uploads it to an online server, with the idea that people
-            that need that data can go online and fetch it themselves, without having a dedicated person to handle
-            the data requests. That project is <a href="#" style="cursor: pointer; text-decoration: none;">here</a>
-            if you want to see how I did it.</p>
-
-            <p>I'm also currently the only FAA licensed drone pilot at the organization. Besides looking very
-            interesting, drone footage is useful for community and public outreach. Below is an example of a planting site around the Manch ac landbridge near Ruddock, LA. <br> <video src="media/Galva_canal.mp4" type="video/mp4" width="100%" controls preload autoplay></video></p>
-
-        </div>
-
-        <div class="container wrapUp">
-            <h3 id="wrapUp">Wrapping Up</h3>
-
-            <p>I've gained a lot from this project and I'm excited to continue the process of learning in levels 2 and 3
-                and beyond. This site is by no means complete, and I will continue to add content to the site. </p>
+            <p>I've gained a lot from this project and I'm excited to continue the process of learning in levels 2 and 3 and beyond. This site is by no means complete, and I will continue to add content to the site. </p>
         </div>
     </section>
 
@@ -102,7 +73,7 @@
         }
 
         function easterEgg() {
-            document.getElementById('easterEgg').innerHTML = 'You just found the first Easter Egg! To learn more about them, <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)">click here</a>.<br>(By the way, an interesting tidbit is that I love cooking! Crab boil, anyone?)<br> <img class="hidden_image" src="media/crab_boil.jpg" alt="cooked crabs in a pot">';
+            document.getElementById('easterEgg').innerHTML = 'You just found the first Easter Egg! To learn more about them, <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)">click here</a>.<br>(By the way, an interesting tidbit is that I love cooking! Crab boil, anyone?)<br> <img class="image" src="media/crab_boil.jpg" alt="cooked crabs in a pot">';
         };
 
         document.getElementById('hiddenLink').onclick = function () {

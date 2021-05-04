@@ -228,9 +228,9 @@ section {
     cursor: help;
 }
 
-.hidden_image {
+.image {
     margin: auto;
-    margin: 20px 0px;
+    margin: 30px 0px;
     max-width: 100%;
     display: block;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
