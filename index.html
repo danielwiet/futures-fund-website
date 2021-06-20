@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="/scripts.js"></script>
 </head>
 
 <body>
@@ -42,20 +43,38 @@
         <div class='container'>
             <h3 id='about'>Greetings!</h3>
 
-            <p>Welcome to my website. If you are new here, please take a look around. You might just <a id="hiddenLink">find</a> something interesting about me.
+            <p>Welcome to my website. If you are new here, please take a look around. You might just <a
+                    id="hiddenLink">find</a> something interesting about me.
             </p>
 
             <p id="easterEgg"></p>
 
-            <p>This website was created as a capstone project for Coding Bootcamp (Coding for the Web) Level 1 provided by The Futures Fund. If you haven't checked them out, I highly encourage you to do so. They can be found <a href="https://www.thewallsproject.org/futuresfund" style="cursor: pointer; text-decoration: none;">here</a>.</p>
+            <p>This website was created as a capstone project for Coding Bootcamp (Coding for the Web) Level 1 provided
+                by The Futures Fund. If you haven't checked them out, I highly encourage you to do so. They can be found
+                <a href="https://www.thewallsproject.org/futuresfund"
+                    style="cursor: pointer; text-decoration: none;">here</a>.</p>
 
-            <p>I enrolled in Coding Bootcamp (Coding for the Web) to gain experience in web building. I have a little experience in Python and thought that it would be good to round it out with HTML and CSS. At times, it hasn't been easy, but most rewarding things in life come with a little challenge.</p>
+            <p>I enrolled in Coding Bootcamp (Coding for the Web) to gain experience in web building. I have a little
+                experience in Python and thought that it would be good to round it out with HTML and CSS. At times, it
+                hasn't been easy, but most rewarding things in life come with a little challenge.</p>
 
-            <div><img  class="image" src="media/tree flowers.jpg" alt="round flowers on trees"></div>
+            <div><img class="image" src="media/tree flowers.jpg" alt="round flowers on trees"></div>
 
-            <p>I've gained a lot from this project and I'm excited to continue the process of learning in levels 2 and 3 and beyond. This site is by no means complete, and I will continue to add content to the site. </p>
+            <p>I've gained a lot from this project and I'm excited to continue the process of learning in levels 2 and 3
+                and beyond. This site is by no means complete, and I will continue to add content to the site. </p>
         </div>
     </section>
+
+    <script>
+        function easterEgg() {
+            document.getElementById("easterEgg").innerHTML =
+                'You just found the first Easter Egg! To learn more about them, <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)">click here</a>.<br>(By the way, an interesting tidbit is that I love cooking! Crab boil, anyone?)<br> <img class="image" src="media/crab_boil.jpg" alt="cooked crabs in a pot">';
+        }
+
+        document.getElementById("hiddenLink").onclick = function () {
+            easterEgg();
+        };
+    </script>
 
     <footer>
         <a class="footer" href="#home">Back to the top</a>
@@ -63,44 +82,6 @@
         <a class="footer button" href="#" onclick="humanOrRobot()">Humans Only</a>
     </footer>
 
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.height = "55%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-        }
-
-        function easterEgg() {
-            document.getElementById('easterEgg').innerHTML = 'You just found the first Easter Egg! To learn more about them, <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)">click here</a>.<br>(By the way, an interesting tidbit is that I love cooking! Crab boil, anyone?)<br> <img class="image" src="media/crab_boil.jpg" alt="cooked crabs in a pot">';
-        };
-
-        document.getElementById('hiddenLink').onclick = function () {
-            easterEgg();
-        };
-
-        function humanOrRobot() {
-            let robot = confirm('Are you human? Ok for yes, cancel for no');
-            if (robot == true) {
-                //If the test condition 1 is TRUE then these it will check for test condition 2
-                let rUSure = confirm('Are you certain? OK for yes, cancel for no')
-                if (rUSure == false) {
-                    //If the test condition 2 is TRUE then these statements will be executed
-                    alert('Only humans question their own existence');
-                }
-
-                else {
-                    //If the c test condition 2 is FALSE then these statements will be executed
-                    alert('Nice try, nobody likes a lying robot!');
-                }
-            }
-            else {
-                //If the test condition 1 is FALSE then these statements will be executed
-                alert('Honest robots also welcome');
-            }
-        }
-    </script>
 </body>
 
 </html>

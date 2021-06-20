@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="/scripts.js"></script>
 </head>
 
 <body>
@@ -53,44 +54,6 @@
         <a class="footer button" href="#" onclick="humanOrRobot()">Humans Only</a>
     </footer>
 
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.height = "55%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-        }
-
-        function easterEgg() {
-            document.getElementById('easterEgg').innerHTML = 'You just found the first Easter Egg! To learn more about them, <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)">click here</a>.<br>(By the way, an interesting tidbit is that I love cooking! Crab boil, anyone?)<br> <img class="hidden_image" src="media/crab_boil.jpg" alt="cooked crabs in a pot">';
-        };
-
-        document.getElementById('hiddenLink').onclick = function () {
-            easterEgg();
-        };
-
-        function humanOrRobot() {
-            let robot = confirm('Are you human? Ok for yes, cancel for no');
-            if (robot == true) {
-                //If the test condition 1 is TRUE then these it will check for test condition 2
-                let rUSure = confirm('Are you certain? OK for yes, cancel for no')
-                if (rUSure == false) {
-                    //If the test condition 2 is TRUE then these statements will be executed
-                    alert('Only humans question their own existence');
-                }
-
-                else {
-                    //If the c test condition 2 is FALSE then these statements will be executed
-                    alert('Nice try, nobody likes a lying robot!');
-                }
-            }
-            else {
-                //If the test condition 1 is FALSE then these statements will be executed
-                alert('Honest robots also welcome');
-            }
-        }
-    </script>
 </body>
 
 </html>
