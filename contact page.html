@@ -50,6 +50,34 @@
             <p>I'm also happy to help if you have questions! Post a comment below and thanks for visiting.<p>
         </div>
         
+        <!-- <form action="/submission-form" method="post"> -->
+        <form>
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name">
+                </li>
+        
+                <li>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="user_email">
+                </li>
+        
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
+        
+                <li class="button">
+                    <button type="clear"
+                        onclick="return confirm('This will clear your form. Are you certain you want to do this?')">Clear
+                        Form</button>
+        
+                    <button type="submit">Send your message</button>
+                </li>
+        
+            </ul>
+        </form>
 
     </section>
 
