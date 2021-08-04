@@ -250,6 +250,12 @@ video {
   margin-top: 30px;
 }
 
+.form-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -282,7 +288,7 @@ footer {
 
 form {
   margin: 0 auto;
-  width: 500px;
+  max-width: 500px;
   padding: 1em;
   border: 1px solid #CCC;
   border-radius: 1em;
@@ -325,16 +331,6 @@ textarea {
   /* Provide space to type some text */
   height: 5em;
 }
-
-.form-button {
-  /* Align buttons with the text fields */
-  padding-left: 90px; /* same size as the label elements */
-}
-
-#button {
-  display: flex;
-  justify-content: space-around;
-} 
 
 textarea {
   border-radius: 10px;
