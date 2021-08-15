@@ -46,38 +46,51 @@
         <div class='container'>
             <h3 id='about'>Contact</h3>
             <p>Let's create something together. I'm honestly not picky about what the project is. Since I'm so new to this, as long as I can learn something from the experience, I'm up for pretty much anything.</p>
-
-            <p>I'm also happy to help if you have questions! Post a comment below and thanks for visiting.<p>
+            
+            <p>We can meet up at any one of the coffee shops in the map below the form. I'm also happy to help if you have questions! Post a comment below and thanks for visiting.<p>
             
             <br>
-            <!-- <form action="/submission-form" method="post"> -->
-            <form>
-                <ul>
-                    <li>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="user_name">
-                    </li>
-            
-                    <li>
-                        <label for="mail">E-mail:</label>
-                        <input type="email" id="mail" name="user_email">
-                    </li>
-            
-                    <li>
-                        <label for="msg">Message:</label>
-                        <textarea id="msg" name="user_message"></textarea>
-                    </li>
-            
-                    <li class="form-button">
-                        <button type="clear"
-                            onclick="return confirm('This will clear your form. Are you certain you want to do this?')">Clear
-                            Form</button>
-            
-                        <button type="submit">Send your message</button>
-                    </li>
-            
-                </ul>
-            </form>
+
+        <form>
+
+            <ul>
+
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name">
+                </li>
+        
+                <li>
+                    <label for="mail">Your email:</label>
+                    <input type="email" id="mail" name="user_email">
+                </li>
+
+                <li>
+                    <label for="subject">Subject
+                    </label>
+                    <input type="text" id="subject" name="subject">
+                </li>
+        
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
+        
+                <li class="form-button">
+                    <button type="reset" onclick="return confirm('This will clear your form. Are you certain you want to do this?')">Clear
+                        Form</button>
+                    
+                    <button type="submit"
+                        onclick="return confirm('Thank you for your submission. Someone will reach out to you within 24hrs')">Send your
+                        message</button>
+                </li>
+        
+            </ul>
+        </form>
+
+        <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBdOslh8cEOJiHUnI0xUJPCKzfZGGQrOZQ&q=coffee+shops+near+New%20Orleans" allowfullscreen frameborder="0" scrolling="no">
+        </iframe>
+
         </div>
         
     </section>
